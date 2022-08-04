@@ -1,0 +1,87 @@
+public class Main {
+    public static void main(String[] args) {
+        Cliente cliente = new Cliente();
+
+        cliente.setEdad(25);
+        System.out.println("Mi edad es: " + cliente.getEdad());
+
+        cliente.setNombre("Juan Pablo");
+        System.out.println("Mi nombre es: " + cliente.getNombre());
+
+        cliente.setTelefono(315000111);
+        System.out.println("Mi telefono es: " + cliente.getTelefono());
+
+        cliente.setCredito(1.5214);
+        System.out.println("Mi credito disponible es: " + cliente.getCredito());
+
+
+        Trabajador trabajador = new Trabajador();
+
+        trabajador.setEdad(28);
+        System.out.println("Mi edad es: " + trabajador.getEdad());
+
+        trabajador.setNombre("Leonardo");
+        System.out.println("Mi nombre es: " + trabajador.getNombre());
+
+        trabajador.setTelefono(315111111);
+        System.out.println("Mi telefono es: " + trabajador.getTelefono());
+
+        trabajador.setSalario(3.45825);
+        System.out.println("Mi salario es: " + trabajador.getSalario());
+
+
+    }
+}
+
+class Persona {
+    int edad;
+    String nombre;
+    int telefono;
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    public int getEdad() {
+        return this.edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    public int getTelefono() {
+        return this.telefono;
+    }
+
+}
+
+class Cliente extends Persona{
+    double credito;
+
+    public void setCredito(double credito) {
+        this.credito = credito;
+    }
+    public double getCredito() {
+        return this.credito;
+    }
+
+}
+
+class Trabajador extends Persona {
+    double salario;
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public double getSalario() {
+        return this.salario;
+    }
+
+}
